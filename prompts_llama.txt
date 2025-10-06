@@ -1,0 +1,44 @@
+"Based on the following frame-by-frame descriptions of a video, create a single accessibility-focused audiovisual description. Merge the frames into a coherent narrative of what happens in the video. Ignore inconsistent or outlier frames that introduce elements or actions that do not align with the main recurring subject and activity. Use concise and descriptive language, as if writing audio description for visually impaired audiences. Highlight the main subject, actions, setting, and atmosphere. Important: Output only the final audiovisual description text, without introductions, disclaimers, or explanations."
+
+Descrição:
+Uma jovem mulher com cabelos castanhos presos em uma trança lateral está sentada no chão, em frente a uma pilha de livros, segurando um livro preto nas mãos. Ela veste um moletom vermelho com letras brancas e rosa. Seus olhos estão levemente baixos, concentrados nas páginas do livro. Ao fundo, vê-se uma parede branca com armários brancos e portas, sugerindo um ambiente doméstico, como um quarto ou sala de estudo. A iluminação é suave e natural, criando um clima aconchegante e propício à leitura. A jovem parece absorvida na leitura, transmitindo uma sensação de calma e tranquilidade.
+
+llama_prompt = f"""
+    Você é um assistente especializado em gerar resumos narrativos de conteúdos audiodescritos.
+    Você receberá **uma lista de audiodescrições em JSON**, cada uma descrevendo um frame de um vídeo, meme ou conteúdo informal.
+
+    **Objetivo:** Gerar um **resumo coeso e compreensível**, combinando todas as descrições dos frames em narrativa clara e cronológica, mantendo fidelidade ao que é visível.  
+
+    **Instruções:**
+    1. Use linguagem clara, natural e neutra.
+    2. Inclua elementos relevantes:
+        - Pessoas, expressões, gestos, ações, roupas, objetos, cenários.
+        - Textos visíveis em memes ou legendas.
+        - Indicações de humor ou ironia se visualmente perceptíveis.
+    3. Não invente informações ou inferências de eventos não descritos.
+    4. Evite repetições desnecessárias.
+    
+
+    **Important:** Output **only** the final summary text or JSON. **Do not include introductions, explanations, disclaimers, or instructions.**
+
+    **Lista de audiodescrições (entrada):**
+    """
+
+    Descrição:
+    Uma jovem mulher de cabelos castanhos, com uma trança lateral, está sentada em diferentes posições, ora no chão, ora em um sofá cinza, vestindo um moletom vermelho com letras rosa e brancas. Ela segura livros, ora um livro preto e antigo, ora um livro preto e verde, e parece estar lendo ou estudando. Ao seu redor, há uma pilha de livros com capas bege ou pretas. O ambiente ao fundo é um quarto ou sala de estar, com paredes brancas, armários brancos, e portas. A jovem aparenta ter uma expressão neutra ou levemente concentrada enquanto lê. Em alguns momentos, ela está acompanhada de um pano cinza. A iluminação nas imagens é suave e natural, sugerindo que foram capturadas durante o dia.
+
+
+
+
+analise imagem:
+Um corvo preto é visto em diferentes posições em quatro painéis. Ele aparece em pé sobre um galho,
+contra um céu roxo com nuvens brancas, gritando com a boca aberta e olhos arregalados.
+Em seguida, o corvo é mostrado limpando a garganta em um fundo amarelo.
+Depois, ele retorna ao galho, agora contra um fundo azul escuro com nuvens brancas,
+ ao lado de um banner com a palavra "Crá!" escrita em letras góticas.
+  O corvo parece estar expressando um som, "CRÁ!", em diferentes contextos.
+
+com a mudança:
+Um corvo preto em estilo cartoon é mostrado em diferentes posições em um meme em quadrinhos. Inicialmente, o corvo está em pé sobre um galho contra um céu roxo com nuvens brancas, com o bico aberto e olhos arregalados, emitindo um som "CRÁ!". Ele se vira para o lado oposto, continuando a emitir o mesmo som. Em seguida, o cenário muda para um fundo amarelo, onde o corvo se vira para o lado e limpa a garganta com um "A-HEM". Por fim, o corvo retorna ao galho contra um fundo noturno roxo com nuvens e olha para a esquerda, enquanto um pergaminho ao lado exibe a mensagem "Cra!". O conjunto parece representar um momento cômico da reação e ajuste do corvo. This appears to be a meme about a comically reactive crow.
+
+Sem frase final:
